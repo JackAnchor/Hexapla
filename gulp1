@@ -8,20 +8,22 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('workflow', function () {
 	return gulp.src('./src/sass/**/*.scss')
+    
     // Initialize sourcemaps before compilation starts
 		.pipe(sourcemaps.init())
-    // Compile with SASS
+    // Compile with sass
 		.pipe(sass().on('error', sass.logError))
     // Apply autoprefixes
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
+		browsers: ['last 2 versions'],
+		cascade: false
 		}))
     // Compile with cssnano
 		.pipe(cssnano())
     // Add/write sourcemaps
 		.pipe(sourcemaps.write('./'))
-    // Update minified/concatenated CSS
+    
+    // Update minified/concatenated CSS   
     .pipe(gulp.dest('./dist/css/'))
 });
 
