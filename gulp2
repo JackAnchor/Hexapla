@@ -21,8 +21,8 @@ gulp.task('css', function() {
       stage: 3,
       features: {
         'nesting-rules': true}}),
-    cssnano()
-     // Compile cssnano
+    // Compile cssnano
+    cssnano() 
   ];
 
   // Run processors array/ update CSS
