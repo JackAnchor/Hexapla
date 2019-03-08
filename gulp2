@@ -1,5 +1,5 @@
 'use strict';
-'use strict';
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
@@ -31,7 +31,7 @@ gulp.task('css', function() {
     .pipe(gulp.dest('./dist'));
 });
 
- // Expose task and specify `gulp.series` and `gulp.parallel`
+ // Expose task and specify gulp.series or gulp.parallel
 gulp.task('default', function() {
   gulp.watch('./src/*.css', gulp.series('css'));
 });
