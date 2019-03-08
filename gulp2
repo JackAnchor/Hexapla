@@ -25,7 +25,7 @@ gulp.task('css', function() {
     cssnano() 
   ];
 
-  // Run processors array/ update CSS
+  // Run processors array/update CSS
   return gulp.src('./src/*.css')
     .pipe( postcss(processors) )
     .pipe(gulp.dest('./dist'));
