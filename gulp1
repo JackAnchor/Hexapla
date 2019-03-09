@@ -1,3 +1,5 @@
+// Modified filepath src/css/sass/ in return AND watch
+
 'use strict';
 
 var gulp = require('gulp');
@@ -7,7 +9,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('workflow', function () {
-	return gulp.src('./src/sass/**/*.scss')
+	return gulp.src('./src/css/sass/**/*.scss')
     
     // Initialize sourcemaps before compilation starts
 		.pipe(sourcemaps.init())
@@ -28,5 +30,9 @@ gulp.task('workflow', function () {
 });
 
 gulp.task('default', function () {
-  gulp.watch('./src/sass/**/*.scss', gulp.series('workflow'));
+  gulp.watch('./src/css/sass/**/*.scss', gulp.series('workflow'));
 });
+
+
+//  Remove @charset UTF-8
+.pipe(replace('@charset "UTF-8";', ''))
