@@ -30,13 +30,14 @@ gulp.task('workflow', function () {
 
 	// Remove @charset UTF-8
 	.pipe(replace('@charset "UTF-8";', ''))
-
-  // Add/write sourcemaps
+	
+	// Add/write sourcemaps
 	.pipe(sourcemaps.write('./'))
-
-  // Update minified/concatenated CSS
-  .pipe(gulp.dest('./dist/css/'))
-});
+	
+	// Update minified/concatenated CSS
+  	.pipe(gulp.dest('./dist/css/'))
+	
+	});
 
 gulp.task('default', function () {
   gulp.watch('./src/css/sass/**/*.scss', gulp.series('workflow'));
