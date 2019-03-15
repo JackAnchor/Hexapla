@@ -1,3 +1,17 @@
+
+Introduction
+===========
+Gulp-based taskrunner
+
+Details
+=======
+Option A: Gulp, Gulp plugins, custom functionality.
+Option B: Gulp, PostCSS + PostCSS plugins, Gulp plugins, custom functionality.
+PostCSS approach benefits: more regular Autoprefixer updates, performance improvements, etc.
+While well-supported, its probably best to minimize overreliance on Sass.
+Postcss-preset-env author 'break-off'
+
+
 <h3>Gulp Options</h3>
 var gulp = require('gulp');
 var sass = require('gulp-sass');
